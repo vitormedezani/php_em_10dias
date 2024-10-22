@@ -11,6 +11,6 @@
       echo "Olá, Mundo! \u{1F30E}"; 
     ?>
   </h1>
-  <p>O mago é implacável</p>
+  <p>O mago é implacável!!</p>
 </body>
 </html>
