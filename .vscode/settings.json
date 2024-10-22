@@ -26,6 +26,9 @@
     "prettier.tabWidth": 2,
     "prettier.semi": false,
   
+    // php snippets
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+
     // terminal
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.profiles.windows": {

@@ -1,6 +1,9 @@
 {
     "recommendations": [
       "bmewburn.vscode-intelephense-client",
-      "hakcorp.php-awesome-snippets"
+      "hakcorp.php-awesome-snippets",
+      "PKief.material-icon-theme",
+      "rocketseat.theme-omni",
+      "esbenp.prettier-vscode"
     ]
   }
