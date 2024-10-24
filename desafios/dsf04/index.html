@@ -6,6 +6,12 @@
   <title>Desafio 05</title>
 </head>
 <body>
-  
+  <form action="cad.php" method="get">
+    <label for="numero_real">Número Real:</label>
+    <br>
+    <!-- step p/ receber número decimais até 3 casas -->
+    <input type="number" name="numero_real" id="idnumero_real" step="0.001" max="4200000000000000">
+    <button type="submit">Enviar</button>
+  </form>
 </body>
 </html>
