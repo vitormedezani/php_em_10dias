@@ -14,13 +14,11 @@
     //
     echo "Analisando número <strong> $numero </strong> que você informou:";
     // exibindo valores
-    echo "<ul>
-      <li>Parte inteira: <strong> $prt_inteira </strong></li>
-      <li>Parte fracionária <strong> $prt_fracionada </strong></li>
-    </ul>";
+    echo "<ul><li>Parte inteira: <strong> $prt_inteira </strong></li>
+      <li>Parte fracionária <strong> $prt_fracionada </strong></li></ul>";
   ?>
 </header>
 <body>
-  
+  <button onclick="javascript:history.go(-1)" >Voltar</button>
 </body>
 </html>
