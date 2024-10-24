@@ -6,16 +6,18 @@
   <title>Desafio 05</title>
 </head>
 <header>
+  <h1>Analisador de Número Real</h1>
   <?php 
-    $numero = 7469.254;
+    $numero = $_REQUEST["numero_real"];
     $prt_inteira = (int) $numero;
     $prt_fracionada = round(($numero - $prt_inteira) * 1000) / 1000;
-    // $teste = $numero - $prt_inteira;
-    // $prt_fracionada = round((float) $prt_fracionada);
-    echo "Analisando número $numero";
-    echo "<br> Parte inteira: $prt_inteira";
-    echo "<br> Parte fracionária $prt_fracionada";
-    // echo "<br> Parte fracionária " . round($teste * 1000) / 1000;
+    //
+    echo "Analisando número <strong> $numero </strong> que você informou:";
+    // exibindo valores
+    echo "<ul>
+      <li>Parte inteira: <strong> $prt_inteira </strong></li>
+      <li>Parte fracionária <strong> $prt_fracionada </strong></li>
+    </ul>";
   ?>
 </header>
 <body>
