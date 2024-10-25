@@ -6,17 +6,10 @@
   <title>CRUD Simples</title>
 </head>
 <body>
-  <h1>Página Inicial</h1>
-
   <div id="paginas">
-    <ul>
-      <li>
-        <a href="?page=create">Novo usuario</a>
-      </li>
-      <li>
-        <a href="?page=read">Lista de usuario</a>
-      </li>
-    </ul>
+    <a aria-current="page" href="index.php">Home</a> 
+    <a href="?page=create">Novo usuario</a>
+    <a href="?page=read">Lista de usuario</a>
   </div>
   
   <div class="container">
@@ -29,6 +22,7 @@
             include("read.php");
             break;
         default:
+          echo "<header><h1>Página Inicial<h1></header>";
           echo "<h2>Bem-Vindo!</h2>";
           break;
       }
