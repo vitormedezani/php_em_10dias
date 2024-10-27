@@ -13,7 +13,8 @@
   </div>
   
   <div class="container">
-    <?php 
+    <?php
+      include ("config.php"); 
       switch (@$_REQUEST["page"]) {
         case "create":
           include("create.php");
