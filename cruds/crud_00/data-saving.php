@@ -53,7 +53,18 @@ switch ($_REQUEST["crud_action"]) {
   break;
   //
   case 'deleting':
-    # code...
+    $sql = "DELETE FROM usuarios WHERE id=". $_REQUEST["id"];
+    $res = $conexao->query($sql);
+
+    if ($res==true) {
+      echo "<script>alert('Cadastro DELETADO com sucesso!!')</script>";
+      echo "<script>location.href='?page=read';</script>";
+    }
+    else {
+      echo "<script>alert('Não foi possível DELETAR o cadastro!!')</script>";
+      echo "<script>location.href='?page=read';</script>";
+    }
+
   break;
 }
 ?>
