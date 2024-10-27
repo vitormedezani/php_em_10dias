@@ -23,7 +23,7 @@
       echo "<td>$row->nome </td>";
       echo "<td>$row->email </td>";
       echo "<td>$row->data_nasc </td>";
-      echo "<td><button onclick=\"location.href='?page=update&id=$row->id'\">Editar</button><button onclick=\"location.href='?page=delete&id=$row->id'\">Excluir</button></td>";
+      echo "<td><button onclick=\"location.href='?page=update&id=$row->id'\">Editar</button><button onclick=\"if(confirm('Tem certeza que deseja deletar?')){location.href='?page=data-saving&crud_action=deleting&id=$row->id';}else{false;}\">Excluir</button></td>";
       echo "</tr>";
     }
     echo "</table>";
