@@ -22,6 +22,9 @@
           case "read":
             include("read.php");
             break;
+          case "create":
+            include("update.php");
+            break;
         default:
           echo "<header><h1>Página Inicial<h1></header>";
           echo "<h2>Bem-Vindo!</h2>";
