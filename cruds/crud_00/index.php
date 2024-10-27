@@ -22,8 +22,11 @@
           case "read":
             include("read.php");
             break;
-          case "create":
+          case "update":
             include("update.php");
+          case "delete":
+            include("delete.php");
+            break;
             break;
           case "data-saving":
             include("data-saving.php");
