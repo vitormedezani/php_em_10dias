@@ -1,5 +1,5 @@
 <h1>Novo Usuário</h1>
-<form action="?page=update" method="GET">
+<form action="?page=update" method="POST">
   <label>Nome</label>
   <input type="text" name="nome">
   <!--  -->
