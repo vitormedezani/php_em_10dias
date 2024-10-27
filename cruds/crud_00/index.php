@@ -25,6 +25,9 @@
           case "create":
             include("update.php");
             break;
+          case "data-saving":
+            include("data-saving.php");
+            break;  
         default:
           echo "<header><h1>Página Inicial<h1></header>";
           echo "<h2>Bem-Vindo!</h2>";
