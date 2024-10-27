@@ -1,5 +1,5 @@
 <h1>Novo Usuário</h1>
-<form action="?page=update" method="POST">
+<form action="?page=data-saving" method="POST">
   <!-- enviando o ação do CRUD de forma oculta -->
   <input type="hidden" name="crud_action" value="creating">
   <label>Nome</label>
