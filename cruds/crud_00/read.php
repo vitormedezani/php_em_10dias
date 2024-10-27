@@ -23,7 +23,7 @@
       echo "<td>$row->nome </td>";
       echo "<td>$row->email </td>";
       echo "<td>$row->data_nasc </td>";
-      echo "<td><button>Editar</button><button>Excluir</button></td>";
+      echo "<td><button onclick=\"location.href='?page=update&id=$row->id'\">Editar</button><button onclick=\"location.href='?page=delete&id=$row->id'\">Excluir</button></td>";
       echo "</tr>";
     }
     echo "</table>";
