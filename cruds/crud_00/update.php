@@ -8,8 +8,9 @@
 ?>
 <form action="?page=data-saving" method="POST">
   <!-- passando as info de qual usuário será alterado com base no id -->
+  <input type="hidden" name="crud_action" value="updating">
+  <!-- passando as info de qual usuário será alterado com base no id -->
   <input type="hidden" name="id" value="<?php echo "$row->id"; ?>">
-  <!--  -->
   <label>Nome</label>
   <input type="text" name="nome" value="<?php echo "$row->nome"; ?>">
   <!--  -->
