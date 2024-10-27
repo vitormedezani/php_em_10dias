@@ -14,6 +14,7 @@
     echo "<th>NOME</th>";
     echo "<th>EMAIL</th>";
     echo "<th>DATA DE NASCIMENTO</th>";
+    echo "<th>Ações</th>";
     echo "</tr>";
     // $row está funcionado como uma array, recebendo os obejtos da tabela usuários 
     while ($row = $res->fetch_object()) {
@@ -22,6 +23,7 @@
       echo "<td>$row->nome </td>";
       echo "<td>$row->email </td>";
       echo "<td>$row->data_nasc </td>";
+      echo "<td><button>Editar</button><button>Excluir</button></td>";
       echo "</tr>";
     }
     echo "</table>";
