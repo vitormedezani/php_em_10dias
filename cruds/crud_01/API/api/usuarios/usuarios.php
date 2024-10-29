@@ -1,6 +1,5 @@
 <?php
 //verificando caminho da api
-var_dump($_SERVER['REQUEST_METHOD']);
 if ($api == 'usuarios') {
   //verificando os metódos 
   switch (true) {
