@@ -39,7 +39,7 @@
       $executar = $resulatdo->execute();
 
       if ($executar) {
-        echo json_encode(['dados' => 'Dados foram inderidos com sucesso.']);
+        echo json_encode(['dados' => 'Dados foram inseridos com sucesso.']);
       } else {
         echo json_encode(['dados' => 'Houve algum erro ao inserir os dados!!']);
       }
