@@ -6,7 +6,7 @@ if ($api == 'usuarios') {
     case ($method == 'GET'):
       include __DIR__.'/get.php';
       break;
-    case ($method == 'POST' && $_POST['_method'] == ''):
+    case ($method == 'POST' && $_POST['_method'] == 'nulo'):
       include __DIR__.'/post.php';
       break;
     case ($_POST['_method'] == 'PUT' && $method == 'POST'):
