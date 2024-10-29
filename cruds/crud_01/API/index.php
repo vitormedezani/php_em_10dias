@@ -35,6 +35,7 @@ if (isset($path[2])) {
 
 $method = $_SERVER["REQUEST_METHOD"];
 
-var_dump($method);
+include_once __DIR__.'/Class/db.class.php';
+include_once __DIR__.'/api/usuarios/usuarios.php';
 
 ?>
