@@ -38,6 +38,9 @@
              echo json_encode(['dados' => 'Não exsitem dados para retornar']);
           }
         break;
+        default:
+          echo json_encode(['ERRO' => 'Erro interno']);
+        break;
       }     
     }
   }

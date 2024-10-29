@@ -45,5 +45,8 @@
       }
 
       break;
+      default:
+        echo json_encode(['ERRO' => 'Erro interno']);
+      break;
   }
 ?>
