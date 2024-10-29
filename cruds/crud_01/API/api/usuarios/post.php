@@ -35,8 +35,8 @@
       $sql .= ")";
 
       $db = DB::connect();
-      $resulatdo = $db->prepare($sql);
-      $executar = $resulatdo->execute();
+      $resultado = $db->prepare($sql);
+      $executar = $resultado->execute();
 
       if ($executar) {
         echo json_encode(['dados' => 'Dados foram inseridos com sucesso.']);

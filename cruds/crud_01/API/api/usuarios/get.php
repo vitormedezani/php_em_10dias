@@ -13,9 +13,9 @@
         case ($acao == 'lista' && $parametro == ''):
           
           $db = DB::connect();
-          $resulatdo = $db->prepare("SELECT * FROM usuarios ORDER BY nome");
-          $resulatdo->execute();
-          $obj = $resulatdo->fetchAll(PDO::FETCH_ASSOC);
+          $resultado = $db->prepare("SELECT * FROM usuarios ORDER BY nome");
+          $resultado->execute();
+          $obj = $resultado->fetchAll(PDO::FETCH_ASSOC);
           
           if ($obj) {
             echo json_encode(['dados' => $obj]);
@@ -28,9 +28,9 @@
         case ($acao == 'lista' && $parametro != ''):
           
           $db = DB::connect();
-          $resulatdo = $db->prepare("SELECT * FROM usuarios WHERE id={$parametro}");
-          $resulatdo->execute();
-          $obj = $resulatdo->fetchObject();
+          $resultado = $db->prepare("SELECT * FROM usuarios WHERE id={$parametro}");
+          $resultado->execute();
+          $obj = $resultado->fetchObject();
           
           if ($obj) {
             echo json_encode(['dados' => $obj]);
