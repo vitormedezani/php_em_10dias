@@ -9,10 +9,10 @@ if ($api == 'usuarios') {
     case ($method == 'POST' && $_POST['_method'] == 'nulo'):
       include __DIR__.'/post.php';
       break;
-    case ($_POST['_method'] == 'PUT' && $method == 'POST'):
+    case (@$_POST['_method'] == 'PUT' && $method == 'POST'):
       include __DIR__.'/put.php';
       break;
-    case ($_POST['_method'] == 'DELETE' && $method == 'POST'):
+    case ($_SERVER['REQUEST_METHOD'] === 'DELETE'):
       include __DIR__.'/delete.php';
       break;    
     default:
