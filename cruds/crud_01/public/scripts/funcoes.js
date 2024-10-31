@@ -1,8 +1,6 @@
 function listarUsuarios() {
   apiListarUsuarios().then((total) => {
-    document
-      .querySelectorAll("main div#lista table#lista tbody tr")
-      .forEach((linha) => linha.remove())
+    document.querySelectorAll("main table#lista tbody tr").forEach((linha) => linha.remove())
     total.dados.map((item) => {
       var lista = document.querySelector("table#lista tbody")
       lista.innerHTML += `<tr>
@@ -20,7 +18,7 @@ function listarUsuarios() {
   })
 }
 
-function CadastrarUsuario(formulario) {
+function cadastrarUsuario(formulario) {
   let res = apiCadastrarUsuario(formulario).then(data => data.dados)
   return res
 }
