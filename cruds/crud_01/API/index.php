@@ -36,6 +36,6 @@ if (isset($path[2])) {
 $method = $_SERVER["REQUEST_METHOD"];
 
 include_once __DIR__.'/Class/db.class.php';
-include_once __DIR__.'/api/usuarios/usuarios.php';
+include_once __DIR__.'/crud/crud.php';
 
 ?>
