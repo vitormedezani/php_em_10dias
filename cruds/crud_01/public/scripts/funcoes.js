@@ -10,8 +10,8 @@ function listarUsuarios() {
       <td>${item.estado}</td>
       <td>${item.telefone}</td>
       <td>
-        <button onClick=""><ion-icon name="trash-outline"></ion-icon></button>
-        <button onClick=""><ion-icon name="create-outline"></ion-icon></button>
+        <button onClick="botaoRemover(${item.id})"><ion-icon name="trash-outline"></ion-icon></button>
+        <button onClick="abrirFormModificar(${item.id})"><ion-icon name="create-outline"></ion-icon></button>
       </td>
       </tr>`
     })
