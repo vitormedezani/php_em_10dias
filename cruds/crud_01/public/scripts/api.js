@@ -13,6 +13,19 @@ async function apiListarUsuarios() {
   }
 }
 
+async function apiListarUsuario(id) {
+  try {
+    const response = await fetch(`${APIBASE}/usuarios/lista/${id}`, {
+      method: "GET",
+    })
+
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 async function apiCadastrarUsuario(formulario) {
   try {
     const response = await fetch(`${APIBASE}/usuarios/adicionar/`, {
