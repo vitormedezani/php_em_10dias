@@ -12,3 +12,17 @@ async function apiListarUsuarios() {
     console.error(error)
   }
 }
+
+async function apiCadastrarUsuario(formulario) {
+  try {
+    const response = await fetch(APIBASE + "/usuarios/adicionar/", {
+      method: "POST",
+      body: formulario,
+    })
+
+    const data = await response.json()
+    return data
+  } catch (error) {
+    console.error(error)
+  }
+}
