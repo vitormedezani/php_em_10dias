@@ -28,10 +28,15 @@ main {
     width:1000px;
     margin:0 auto;
 }
+main table#lista {
+    
+}
 main table#lista thead tr th {
     padding:5px;
 }
-
+main table#lista tbody tr {
+    
+}
 main table#lista tbody tr td {
     padding:5px;
 }
