@@ -51,7 +51,7 @@ function abrirFormModificar(id) {
 }
 
 function botaoModificar() {
-  const id = document.querySelector('table#form input#id').value
+  const id = document.querySelector("table#form input#id").value
   const formulario = new FormData()
   formulario.append("_method", "PUT")
   formulario.append("nome", document.querySelector("input#nome").value)
@@ -59,10 +59,8 @@ function botaoModificar() {
   formulario.append("cidade", document.querySelector("input#cidade").value)
   formulario.append("estado", document.querySelector("input#estado").value)
   formulario.append("telefone", document.querySelector("input#telefone").value)
-  
-  if (
-    confirm(`Deseja realmente modificar o usuário ${formulario.get("nome")} ?`)
-  ) {
+
+  if (confirm(`Deseja realmente modificar o usuário ${formulario.get("nome")} ?`)) {
     modificarUsuario(id, formulario).then((res) => {
       alert(res)
       limparFormulario()
@@ -72,4 +70,20 @@ function botaoModificar() {
     alert("Você cancelou a execução")
     limparFormulario()
   }
+}
+
+function botaoRemover(id) {
+  listarUsuario(id).then((res) => {
+    if (confirm(`Deseja realmente deletar o usuário ${res.nome} ?`)) {
+      removerUsuario(id).then(res =>{
+        alert(res)
+        listarUsuarios()
+      }
+      )
+      
+    } else {
+      alert("Você cancelou a execução")
+      limparFormulario()
+    }
+  })
 }

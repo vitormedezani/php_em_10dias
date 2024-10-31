@@ -33,8 +33,8 @@ function modificarUsuario(id, formulario) {
   return res
 }
 
-function removerUsuario(id, formulario) {
-  let res = apiRemoverUsuario(id, formulario).then((data) => data.dados)
+function removerUsuario(id) {
+  let res = apiRemoverUsuario(id).then((data) => data.dados)
   return res
 }
 

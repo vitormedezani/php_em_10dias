@@ -54,11 +54,10 @@ async function apiModificarUsuario(id, formulario) {
   }
 }
 
-async function apiRemoverUsuario(id, formulario) {
+async function apiRemoverUsuario(id) {
   try {
     const response = await fetch(`${APIBASE}/usuarios/delete/${id}`, {
-      method: "POST",
-      body: formulario,
+      method: "DELETE",
     })
 
     const data = await response.json()
