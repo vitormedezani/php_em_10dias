@@ -16,15 +16,17 @@ function limparFormulario() {
   document.querySelector("button#btnModificar").style.display = "inherit"
 }
 
-function botaoCadastrar(){
+function botaoCadastrar() {
   const formulario = new FormData()
-  formulario.append("nome", document.querySelector('input#nome').value)
-  formulario.append("email", document.querySelector('input#email').value)
-  formulario.append("cidade", document.querySelector('input#cidade').value)
-  formulario.append("estado", document.querySelector('input#estado').value)
-  formulario.append("telefone", document.querySelector('input#telefone').value)
-  if (confirm(`Deseja realmente incluir o usuário ${formulario.get("nome")} ?`)) {
-    cadastrarUsuario(formulario).then(res => {
+  formulario.append("nome", document.querySelector("input#nome").value)
+  formulario.append("email", document.querySelector("input#email").value)
+  formulario.append("cidade", document.querySelector("input#cidade").value)
+  formulario.append("estado", document.querySelector("input#estado").value)
+  formulario.append("telefone", document.querySelector("input#telefone").value)
+  if (
+    confirm(`Deseja realmente incluir o usuário ${formulario.get("nome")} ?`)
+  ) {
+    cadastrarUsuario(formulario).then((res) => {
       alert(res)
       limparFormulario()
       listarUsuarios()
@@ -33,4 +35,16 @@ function botaoCadastrar(){
     alert("Você cancelou a execução")
     limparFormulario()
   }
+}
+
+function abrirFormModificar(id) {
+  document.querySelector("table#form").style.display = "table"
+  document.querySelector("button#btnCadastrar").style.display = "none"
+  listarUsuario(id).then(res => {
+    document.querySelector("input#nome").value = res.nome
+    document.querySelector("input#email").value = res.email
+    document.querySelector("input#cidade").value = res.cidade
+    document.querySelector("input#estado").value = res.estado
+    document.querySelector("input#telefone").value = res.telefone
+  })
 }

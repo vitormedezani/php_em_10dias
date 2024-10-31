@@ -18,8 +18,8 @@ function listarUsuarios() {
   })
 }
 
-function cadastrarUsuario(id) {
-  let res = apiCadastrarUsuario(id).then((data) => data.dados)
+function listarUsuario(id) {
+  let res = apiListarrUsuario(id).then((data) => data.dados)
   return res
 }
 
