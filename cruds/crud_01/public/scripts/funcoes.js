@@ -19,7 +19,7 @@ function listarUsuarios() {
 }
 
 function listarUsuario(id) {
-  let res = apiListarrUsuario(id).then((data) => data.dados)
+  let res = apiListarUsuario(id).then((data) => data.dados)
   return res
 }
 
