@@ -22,3 +22,8 @@ function cadastrarUsuario(formulario) {
   let res = apiCadastrarUsuario(formulario).then(data => data.dados)
   return res
 }
+
+function modificarUsuario(id, formulario) {
+  let res = apiCadastrarUsuario(id, formulario).then((data) => data.dados)
+  return res
+}
