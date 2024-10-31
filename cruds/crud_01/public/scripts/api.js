@@ -42,7 +42,7 @@ async function apiCadastrarUsuario(formulario) {
 
 async function apiModificarUsuario(id, formulario) {
   try {
-    const response = await fetch(`${APIBASE}/usuarios/adicionar/${id}`, {
+    const response = await fetch(`${APIBASE}/usuarios/update/${id}`, {
       method: "POST",
       body: formulario,
     })
