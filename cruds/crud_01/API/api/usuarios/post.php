@@ -5,7 +5,6 @@
       echo json_encode(['ERRO' => 'Caminho não encontrado']);
       break;  
     case ($acao == 'adicionar' && $parametro == ''):
-      array_shift($_POST);
       // .= mantém o valor anterior e adicona outro valor, basicamente serve pra quebrar a linha
       //AUTOMATIZANDO a inserção de dados
       $sql = "INSERT INTO usuarios (";

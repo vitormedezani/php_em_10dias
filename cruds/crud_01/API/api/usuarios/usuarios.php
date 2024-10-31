@@ -6,10 +6,10 @@ if ($api == 'usuarios') {
     case ($method == 'GET'):
       include __DIR__.'/get.php';
       break;
-    case ($method == 'POST' && $_POST['_method'] == 'nulo'):
+    case ($method == 'POST' && !isset($_POST['_method'])):
       include __DIR__.'/post.php';
       break;
-    case (@$_POST['_method'] == 'PUT' && $method == 'POST'):
+    case ($method == 'POST' && isset($_POST['_method']) && @$_POST['_method'] == 'PUT'):
       include __DIR__.'/put.php';
       break;
     case ($_SERVER['REQUEST_METHOD'] === 'DELETE'):
